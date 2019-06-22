@@ -5,15 +5,14 @@ import { FormsModule } from '@angular/forms';
 
 import { IndexComponent } from './index/index.component';
 import { SaveComponent } from './save/save.component';
-import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [IndexComponent, SaveComponent],
   imports: [
     CommonModule,
     FormsModule,
-    ProductRoutingModule,
-    HttpClientModule
+    ProductRoutingModule
   ]
 })
 export class ProductModule { }

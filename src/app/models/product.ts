@@ -2,7 +2,7 @@ import {Category} from './category';
 
 
 export class Product {
-  idProduct: number;
+  id: number;
   unitePrice: number;
   name: string;
   amount: number;

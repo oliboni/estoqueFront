@@ -1,6 +1,8 @@
+import {Product} from './product';
 
 export class Category {
-  idCategory: number;
+  id: number;
   name: string;
+  products: Array<Product>;
 
 }
