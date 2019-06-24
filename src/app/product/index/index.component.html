@@ -1,5 +1,6 @@
 <div class="action">
   <button (click)="save()">Novo Produto</button>
+  <button (click)="saveCategories()">Nova Categoria</button>
 </div>
 
 <table>
@@ -14,12 +15,13 @@
   </thead>
 
   <tbody>
-    <tr *ngFor=" let product of products">
+    <tr *ngFor=" let product of products, let key = index">
       <td>{{product.id}}</td>
       <td>{{product.name}}</td>
-      <td>{{product.unitePrice}}</td>
+      <td>{{product.unitPrice}}</td>
       <td>{{product.amount}}</td>
       <td>{{product.Category.name}}</td>
+      <button><a (click)="delete(product.id, key)">Excluir</a></button>
     </tr>
   </tbody>
 

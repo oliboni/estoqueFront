@@ -12,7 +12,7 @@ import { SaveComponent } from './save/save.component';
   imports: [
     CommonModule,
     FormsModule,
-    ProductRoutingModule
+    ProductRoutingModule,
   ]
 })
 export class ProductModule { }

@@ -5,6 +5,10 @@ const routes: Routes = [
   {
     path: 'products-module',
     loadChildren: './product/product-routing.module#ProductRoutingModule'
+  },
+  {
+    path: 'categories-module',
+    loadChildren: './category/catego-routing.module#CategoryRoutingModule'
   }
 ];
 

@@ -1,23 +1,29 @@
-<div>
-  <form >
-<!--    <mat-form-field class="example-full-width">-->
-<!--      ID da Categoria:-->
-<!--      <input type="numeric" name="id_category" [(ngModel)]="product.Category.id"/>-->
-<!--    </mat-form-field>-->
-
+<a>Novo Produto</a>
+<form>
+  <div class="form">
     <label>
-      Nome:
-      <input type="text" name="name" [(ngModel)]="product.name"/>
+      Categoria:
+      <input type="numeric" name="idCategory" manInput placeholder="Id da Categoria" [(ngModel)]="product.Category"/>
     </label>
+    <label class="label">
+      Nome:
+      <input type="text" name="name" manInput placeholder="Nome do Produto" [(ngModel)]="product.name"/>
+    </label>
+  </div>
+
+  <div class="form">
     <label>
       Quantidade:
-      <input type>
+      <input type="numeric" name="amount" manInput placeholder="Quantidade" [(ngModel)]="product.amount"/>
     </label>
-  </form>
-</div>
+    <label class="label">
+      Preço Unitário:
+      <input type="numeric" name="unitPrice" manInput placeholder="Valor unitário" [(ngModel)]="product.unitPrice"/>
+    </label>
+  </div>
 
-/* "idCategory": 1,
-"idProvider": 1,
-"name": "Lápis",
-"unitPrice": 1.99,
-"amount": 5*/
+  <div >
+    <button  (click)="submit()" >Salvar</button>
+    <button (click)="back()">Voltar</button>
+  </div>
+</form>

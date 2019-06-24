@@ -1,3 +1,14 @@
-<p>
-  save works!
-</p>
+<h1 class="title">Nova Categoria</h1>
+<form class="form">
+  <div>
+    <label>
+      Nome:
+      <input type="text" name="name" manInput placeholder="Nome da Categoria" [(ngModel)]="category.name"/>
+    </label>
+  </div>
+
+  <div >
+    <button  (click)="submit()" >Salvar</button>
+    <button (click)="back()">Voltar</button>
+  </div>
+</form>

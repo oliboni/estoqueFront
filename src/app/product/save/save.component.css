@@ -1,13 +1,14 @@
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
+.form {
+  padding-top: 10px;
   width: 100%;
 }
 
-.example-full-width {
-  width: 100%;
+.label{
+  margin-left: 10px;
 }
 
-td {
-  padding-right: 8px;
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
 }
+

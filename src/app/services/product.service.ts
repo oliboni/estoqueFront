@@ -23,10 +23,14 @@ export class ProductService {
   }
 
   create(product: Product): Observable<Product> {
-    return this._http.post<Product>('http://localhost:3000/produts/', Product);
+    return this._http.post<Product>('http://localhost:3000/products', product);
   }
 
   update(id: number, product: Product): Observable<Product> {
     return this._http.put<Product>('http://localhost:3000/products/' + id, product);
+  }
+
+  delete(id: number) {
+    return this._http.delete('http://localhost:3000/products/' + id);
   }
 }

@@ -24,8 +24,18 @@ export class IndexComponent implements OnInit {
     this._router.navigate(['/products/save']);
   }
 
-  setCategories(categories: Category[]) {
-    this.categories = categories;
+  saveCategories() {
+    this._router.navigate(['/categories/save']);
+  }
+
+  delete(id: number, key: number) {
+    this._productService.delete(id).subscribe(
+      data => {
+        this.products.splice(key, 1);
+      }, error => {
+        console.log(error.error);
+      }
+    );
   }
 
   ngOnInit() {
