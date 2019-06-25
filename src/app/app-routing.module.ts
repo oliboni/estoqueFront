@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'categories-module',
-    loadChildren: './category/catego-routing.module#CategoryRoutingModule'
+    loadChildren: './category/category-routing.module#CategoryRoutingModule'
   }
 ];
 

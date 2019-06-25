@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
 
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product';
@@ -15,10 +18,19 @@ import { Category } from '../../models/category';
 export class IndexComponent implements OnInit {
 
   public products = new Array<Product>();
-  public categories = new Array<Category>();
+  displayedColumns: string[] = ['id', 'Nome', 'Preço', 'Quantidade', 'Categoria'];
+  dataSource: MatTableDataSource<Product>;
+
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   // tslint:disable-next-line:variable-name
-  constructor( private _productService: ProductService, private _router: Router) { }
+  constructor( private _productService: ProductService, private _router: Router) {
+
+    const produtos = Product;
+    // @ts-ignore
+    this.dataSource = new MatTableDataSource(produtos);
+  }
 
   save() {
     this._router.navigate(['/products/save']);
@@ -42,6 +54,16 @@ export class IndexComponent implements OnInit {
     this._productService.getAll().subscribe(data => {
       this.products = data;
     });
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 }
 
