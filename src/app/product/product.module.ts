@@ -5,7 +5,14 @@ import { FormsModule } from '@angular/forms';
 
 import { IndexComponent } from './index/index.component';
 import { SaveComponent } from './save/save.component';
-import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatPaginatorModule, MatTableModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatPaginatorModule, MatSortModule,
+  MatTableModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [IndexComponent, SaveComponent],
@@ -18,6 +25,8 @@ import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatPaginatorModu
     MatFormFieldModule,
     MatTableModule,
     MatPaginatorModule,
+    MatInputModule,
+    MatSortModule,
   ]
 })
 export class ProductModule { }

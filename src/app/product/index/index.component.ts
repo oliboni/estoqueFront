@@ -19,17 +19,19 @@ export class IndexComponent implements OnInit {
 
   public products = new Array<Product>();
   displayedColumns: string[] = ['id', 'Nome', 'Preço', 'Quantidade', 'Categoria'];
-  dataSource: MatTableDataSource<Product>;
+  dado: MatTableDataSource<Product>;
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
+  private dataSource: MatTableDataSource<Product>;
+
 
   // tslint:disable-next-line:variable-name
   constructor( private _productService: ProductService, private _router: Router) {
 
-    const produtos = Product;
+    const products = Product;
     // @ts-ignore
-    this.dataSource = new MatTableDataSource(produtos);
+    this.dataSource = new MatTableDataSource(products);
   }
 
   save() {
@@ -53,17 +55,20 @@ export class IndexComponent implements OnInit {
   ngOnInit() {
     this._productService.getAll().subscribe(data => {
       this.products = data;
+      this.dado.paginator = this.paginator;
+      this.dado.sort = this.sort;
     });
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
   }
 
-  applyFilter(filterValue: string) {
+  applyFilter(filterValue: EventTarget) {
+    // @ts-ignore
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
+    if (this.dado.paginator) {
+      this.dado.paginator.firstPage();
     }
   }
 }
+
+
 
