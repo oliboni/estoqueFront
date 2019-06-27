@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'categories-module',
     loadChildren: './category/category-routing.module#CategoryRoutingModule'
+  },
+  {
+    path: 'providers-module',
+    loadChildren: './provider/provider-routing.module#ProviderRoutingModule'
   }
 ];
 

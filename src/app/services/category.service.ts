@@ -13,7 +13,7 @@ export class CategoryService {
   // tslint:disable-next-line:variable-name
   constructor(private _http: HttpClient) { }
 
-  get(id:number): Observable<Category> {
+  get(id: number): Observable<Category> {
     return this._http.get<Category>('http://localhost:3000/categories/' + id);
   }
 

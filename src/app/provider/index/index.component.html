@@ -1,0 +1,26 @@
+<div class="data">
+  <table>
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>CNPJ</td>
+        <td>Nome</td>
+        <td>Telefone</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let provider of providers">
+        <td>{{provider.id}}</td>
+        <td>{{provider.cnpj}}</td>
+        <td>{{provider.name}}</td>
+        <td>{{provider.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="data">
+  <button (click)="back()"> Voltar</button>
+</div>
+

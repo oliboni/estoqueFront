@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductModule} from './product/product.module';
 import { CategoryModule} from './category/category.module';
+import { ProviderModule} from './provider/provider.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { CategoryModule} from './category/category.module';
     HttpClientModule,
     BrowserAnimationsModule,
     CategoryModule,
+    ProviderModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

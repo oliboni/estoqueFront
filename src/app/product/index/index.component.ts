@@ -34,6 +34,10 @@ export class IndexComponent implements OnInit {
     this.dataSource = new MatTableDataSource(products);
   }
 
+  back() {
+    this._router.navigate(['/']);
+  }
+
   save() {
     this._router.navigate(['/products/save']);
   }
