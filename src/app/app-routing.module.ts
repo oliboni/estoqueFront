@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'providers-module',
     loadChildren: './provider/provider-routing.module#ProviderRoutingModule'
+  },
+  {
+    path: 'address-module',
+    loadChildren: './address/address-routing.module#AddressRoutingModule'
   }
 ];
 

@@ -19,6 +19,11 @@ export class IndexComponent implements OnInit {
     this._router.navigate(['/']);
   }
 
+  save() {
+    this._router.navigate(['providers/save']);
+  }
+
+
   ngOnInit() {
     this._providerService.getAll().subscribe(data => {this.providers = data; });
   }

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ProductModule} from './product/product.module';
 import { CategoryModule} from './category/category.module';
 import { ProviderModule} from './provider/provider.module';
+import {AddressModule} from './address/address.module';
 
 
 @NgModule({
@@ -17,11 +18,12 @@ import { ProviderModule} from './provider/provider.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ProductModule,
     HttpClientModule,
     BrowserAnimationsModule,
     CategoryModule,
-    ProviderModule
+    ProviderModule,
+    AddressModule,
+    ProductModule,
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

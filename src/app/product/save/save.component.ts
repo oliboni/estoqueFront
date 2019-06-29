@@ -15,7 +15,7 @@ export class SaveComponent implements OnInit {
   public product = new Product();
 
   // tslint:disable-next-line:variable-name
-  constructor(private _productService: ProductService, private _router: Router, private _activatedRoute: ActivatedRoute) { }
+  constructor(private _productService: ProductService, private _router: Router) { }
 
   submit() {
     if (this.product.id > 0) {

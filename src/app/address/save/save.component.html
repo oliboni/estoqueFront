@@ -1,0 +1,29 @@
+<form>
+  <div>
+    <label>
+      Estado:
+      <input type="text" name="state" manInput placeholder="Estado" [(ngModel)]="address.state">
+    </label>
+    <label>
+      Cidade:
+      <input type="text" name="city" manInput placeholder="Cidade" [(ngModel)]="address.city">
+    </label>
+  </div>
+  <div>
+    <label>
+      Rua:
+      <input type="text" name="street" maninput placeholder="Nome da Rua" [(ngModel)]="address.street">
+    </label>
+    <label>
+      Número:
+      <input type="number" name="number" matInput placeholder="Número do estabelecimento" [(ngModel)]="address.number">
+    </label>
+  </div>
+
+  <div>
+    <button (click)="submit()">Salvar</button>
+    <button (click)="back()">Voltar</button>
+  </div>
+
+</form>
+

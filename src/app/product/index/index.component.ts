@@ -59,8 +59,8 @@ export class IndexComponent implements OnInit {
   ngOnInit() {
     this._productService.getAll().subscribe(data => {
       this.products = data;
-      this.dado.paginator = this.paginator;
-      this.dado.sort = this.sort;
+      // this.dado.paginator = this.paginator;
+      // this.dado.sort = this.sort;
     });
   }
 
