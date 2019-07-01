@@ -9,6 +9,7 @@ import { ProductModule} from './product/product.module';
 import { CategoryModule} from './category/category.module';
 import { ProviderModule} from './provider/provider.module';
 import {AddressModule} from './address/address.module';
+import {MatButtonModule, MatIconModule, MatToolbarModule} from '@angular/material';
 
 
 @NgModule({
@@ -24,6 +25,9 @@ import {AddressModule} from './address/address.module';
     ProviderModule,
     AddressModule,
     ProductModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

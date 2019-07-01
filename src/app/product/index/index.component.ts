@@ -2,11 +2,10 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
+import { Router } from '@angular/router';
 
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product';
-import { Router } from '@angular/router';
-import { Category } from '../../models/category';
 
 
 @Component({

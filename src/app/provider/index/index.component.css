@@ -1,12 +1,18 @@
-td, tr{
-  text-align: center;
-  padding-left: 15px;
-}
-
 .data{
   padding-top: 3%;
 }
 
 thead{
   font-weight: bold;
+}
+
+table {
+  width: 100%;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.form {
+  width: 75%;
+  align-content: center;
 }
