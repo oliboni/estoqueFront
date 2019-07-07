@@ -6,6 +6,6 @@ export class Product {
   unitPrice: number;
   name: string;
   amount: number;
-  Category: Category;
+  idCategory: number;
 
 }

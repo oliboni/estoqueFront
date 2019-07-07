@@ -1,3 +1,41 @@
-<p>
-  save works!
-</p>
+<div class="form">
+  <mat-card class="mat-elevation-z8">
+    <div>
+      <div>
+        <h1>Novo Fornecedor</h1>
+      </div>
+      <form>
+        <div>
+          <mat-form-field>
+            <input type="text" name="name" matInput placeholder="Name" [(ngModel)]="provider.name">
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="provider.cnpj" type="text" name="cnpj" matInput placeholder="CNPJ">
+          </mat-form-field>
+          <mat-form-field>
+            <input [(ngModel)]="provider.phone" type="text" name="phone" matInput placeholder="Número Telefone">
+          </mat-form-field>
+        </div>
+        <div><h4>Endereço</h4></div>
+        <div>
+          <mat-form-field>
+            <input type="text" name="state" matInput placeholder="Estado" [(ngModel)]="address.state">
+          </mat-form-field>
+          <mat-form-field>
+            <input type="text" name="city" matInput placeholder="Cidade" [(ngModel)]="address.city">
+          </mat-form-field>
+          <mat-form-field>
+            <input type="text" name="street" matInput placeholder="Rua" [(ngModel)]="address.street">
+          </mat-form-field>
+          <mat-form-field>
+            <input type="number" name="number" matInput placeholder="Número" [(ngModel)]="address.number">
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button color="accent" style="color: #ffffff" (click)="submit()"><mat-icon aria-label="Salvar">check_circle</mat-icon> Salvar</button>
+          <button mat-raised-button color="warn" (click)="back()"><mat-icon aria-label="Cancelar">cancel</mat-icon>Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>

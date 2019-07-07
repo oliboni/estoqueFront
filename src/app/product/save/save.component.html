@@ -1,29 +1,40 @@
-<a>Novo Produto</a>
-<form>
-  <div class="form">
-    <label>
-      Categoria:
-      <input type="numeric" name="idCategory" manInput placeholder="Id da Categoria" [(ngModel)]="product.Category"/>
-    </label>
-    <label class="label">
-      Nome:
-      <input type="text" name="name" manInput placeholder="Nome do Produto" [(ngModel)]="product.name"/>
-    </label>
-  </div>
+<div class="form">
+  <mat-card class="mat-elevation-z8">
+    <div>
+      <div>
+        <h1>Novo Produto</h1>
+      </div>
+      <form>
+        <div>
+          <mat-form-field>
+            <mat-label>Categoria</mat-label>
+            <mat-select [(ngModel)]="product.idCategory" name="idCategory">
+              <mat-option *ngFor="let category of category" [value]="category.id">{{category.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input type="text" name="name" matInput placeholder="Nome" [(ngModel)]="product.name">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input type="numeric" name="amount" matInput placeholder="Quantidade" [(ngModel)]="product.amount">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input type="numeric" name="unitPrice" matInput placeholder="Preço Unitário" [(ngModel)]="product.unitPrice">
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button color="accent" style="color: #ffffff" (click)="submit()"><mat-icon aria-label="Salvar">check_circle</mat-icon> Salvar</button>
+          <button mat-raised-button color="warn" (click)="back()"><mat-icon aria-label="Cancelar">cancel</mat-icon>Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>
 
-  <div class="form">
-    <label>
-      Quantidade:
-      <input type="numeric" name="amount" manInput placeholder="Quantidade" [(ngModel)]="product.amount"/>
-    </label>
-    <label class="label">
-      Preço Unitário:
-      <input type="numeric" name="unitPrice" manInput placeholder="Valor unitário" [(ngModel)]="product.unitPrice"/>
-    </label>
-  </div>
 
-  <div >
-    <button  (click)="submit()" >Salvar</button>
-    <button (click)="back()">Voltar</button>
-  </div>
-</form>

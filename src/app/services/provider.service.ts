@@ -24,8 +24,8 @@ export class ProviderService {
     return this._http.post<Provider>('http://localhost:3000/providers', provider);
   }
 
-  delete(id: number): Observable<Provider> {
-    return this._http.delete<Provider>('http://localhost:3000/providers/' + id );
+  delete(id: number): Observable<any> {
+    return this._http.delete<any>('http://localhost:3000/providers/' + id );
   }
 
   update(provider: Provider, id: number) {

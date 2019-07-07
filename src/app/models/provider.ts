@@ -5,5 +5,5 @@ export class Provider {
   cnpj: string;
   name: string;
   phone: string;
-  Address: Address;
+  idAddress: number;
 }

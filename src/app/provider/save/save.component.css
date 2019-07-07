@@ -1,0 +1,26 @@
+.form {
+  text-align: center;
+  align-items: center;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.label{
+  margin-left: 10px;
+}
+
+mat-form-field {
+  margin: 0 2%;
+  text-align: center;
+  width: 40%;
+}
+
+button {
+  margin: 0 5%;
+
+}
+

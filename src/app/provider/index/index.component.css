@@ -1,18 +1,31 @@
-.data{
-  padding-top: 3%;
+td{
+  text-align: center;
 }
 
-thead{
-  font-weight: bold;
+th {
+  font-size: larger;
+  text-align: center;
 }
 
 table {
   width: 100%;
-  background: #ffffff;
-  padding: 20px;
 }
 
-.form {
-  width: 75%;
-  align-content: center;
+.body {
+  width: 90%;
+  padding: 5%;
+}
+
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.esquerda {
+  float: left;
+}
+
+.direita {
+  float: right;
 }

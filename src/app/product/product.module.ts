@@ -6,11 +6,11 @@ import { FormsModule } from '@angular/forms';
 import { IndexComponent } from './index/index.component';
 import { SaveComponent } from './save/save.component';
 import {
-  MatButtonModule,
+  MatButtonModule, MatCardModule,
   MatCheckboxModule,
-  MatFormFieldModule,
+  MatFormFieldModule, MatIconModule,
   MatInputModule,
-  MatPaginatorModule, MatSortModule,
+  MatPaginatorModule, MatSelectModule, MatSortModule,
   MatTableModule
 } from '@angular/material';
 
@@ -27,6 +27,9 @@ import {
     MatPaginatorModule,
     MatInputModule,
     MatSortModule,
+    MatSelectModule,
+    MatCardModule,
+    MatIconModule,
   ]
 })
 export class ProductModule { }

@@ -1,14 +1,20 @@
-<h1 class="title">Nova Categoria</h1>
-<form class="form">
-  <div>
-    <label>
-      Nome:
-      <input type="text" name="name" placeholder="Nome da Categoria" [(ngModel)]="category.name"/>
-    </label>
-  </div>
-
-  <div >
-    <button  (click)="submit()" >Salvar</button>
-    <button (click)="back()">Voltar</button>
-  </div>
-</form>
+<div class="form">
+  <mat-card class="mat-elevation-z8">
+    <div>
+      <div>
+        <h1>Nova Categoria</h1>
+      </div>
+      <form>
+        <div>
+          <mat-form-field>
+            <input type="text" name="name" matInput placeholder="Nome" [(ngModel)]="category.name">
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button color="accent" style="color: #ffffff" (click)="submit()"><mat-icon aria-label="Salvar">check_circle</mat-icon> Salvar</button>
+          <button mat-raised-button color="warn" (click)="back()"><mat-icon aria-label="Cancelar">cancel</mat-icon>Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductService} from '../../services/product.service';
-import {Product} from '../../models/product';
-import {ActivatedRoute, Router} from '@angular/router';
+import { Router} from '@angular/router';
+
+import { ProductService} from '../../services/product.service';
+import { Product} from '../../models/product';
+import { Category} from '../../models/category';
+import {CategoryService} from '../../services/category.service';
 
 @Component({
   selector: 'app-save',
@@ -13,9 +16,10 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class SaveComponent implements OnInit {
 
   public product = new Product();
+  public category = new Array<Category>();
 
   // tslint:disable-next-line:variable-name
-  constructor(private _productService: ProductService, private _router: Router) { }
+  constructor(private _productService: ProductService, private _router: Router, private _categoryService: CategoryService) { }
 
   submit() {
     if (this.product.id > 0) {
@@ -43,6 +47,7 @@ export class SaveComponent implements OnInit {
 
 
   ngOnInit() {
+    this._categoryService.getAll().subscribe(data => {this.category = data; });
   }
 
 }
