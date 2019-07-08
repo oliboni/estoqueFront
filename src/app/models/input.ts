@@ -1,12 +1,9 @@
-import {Product} from './product';
-import {Provider} from './provider';
-
 export class Input {
-  idInput: number;
+  id: number;
   date: Date;
   amount: number;
   unitPrice: number;
   totalPrice: number;
-  Product: Product;
-  Provider: Provider;
+  idProduct: number;
+  idProvider: number;
 }

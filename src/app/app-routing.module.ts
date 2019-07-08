@@ -15,8 +15,12 @@ const routes: Routes = [
     loadChildren: './provider/provider-routing.module#ProviderRoutingModule'
   },
   {
-    path: 'address-module',
-    loadChildren: './address/address-routing.module#AddressRoutingModule'
+    path: 'input-module',
+    loadChildren: './input/input-routing.module#InputRoutingModule'
+  },
+  {
+    path: 'output-module',
+    loadChildren: './output/output-routing.module#OutputRoutingModule'
   }
 ];
 

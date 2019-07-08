@@ -20,7 +20,7 @@ export class IndexComponent implements OnInit {
 
   // tslint:disable-next-line:variable-name
   constructor( private _productService: ProductService, private _router: Router) { }
-  displayedColumns: string[] = ['name', 'unitPrice', 'amount', 'category'];
+  displayedColumns: string[] = ['name', 'unitPrice', 'amount', 'category', 'actions'];
   dataSource = new MatTableDataSource<Product>(this.products);
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -38,10 +38,10 @@ export class IndexComponent implements OnInit {
     this._router.navigate(['/categories/save']);
   }
 
-  delete(id: number, key: number) {
+  delete(id: number) {
     this._productService.delete(id).subscribe(
       data => {
-        this.products.splice(key, 1);
+        this.getProducts();
       }, error => {
         console.log(error.error);
       }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 import { ProductService} from '../../services/product.service';
 import { Product} from '../../models/product';
@@ -18,8 +18,8 @@ export class SaveComponent implements OnInit {
   public product = new Product();
   public category = new Array<Category>();
 
-  // tslint:disable-next-line:variable-name
-  constructor(private _productService: ProductService, private _router: Router, private _categoryService: CategoryService) { }
+  // tslint:disable-next-line:variable-name max-line-length
+  constructor(private _productService: ProductService, private _router: Router, private _categoryService: CategoryService, private activatedRoute: ActivatedRoute) { }
 
   submit() {
     if (this.product.id > 0) {
@@ -48,6 +48,15 @@ export class SaveComponent implements OnInit {
 
   ngOnInit() {
     this._categoryService.getAll().subscribe(data => {this.category = data; });
+
+    let id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+
+    if (id > 0) {
+      this._productService.get(id).subscribe(
+        data => {this.product = data; this._categoryService.getAll().subscribe(dado => {this.category = dado; }); },
+        error => {console.log(error); }
+      );
+    }
   }
 
 }

@@ -23,10 +23,7 @@ export class IndexComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   // tslint:disable-next-line:variable-name max-line-length
-  constructor(private _providerService: ProviderService, private _router: Router, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    // iconRegistry.addSvgIcon(
-    //   'voltar', sanitizer.bypassSecurityTrustUrl('')
-    // )
+  constructor(private _providerService: ProviderService, private _router: Router) {
 
   }
 

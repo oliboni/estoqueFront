@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'products/save',
     component: SaveComponent
+  },
+  {
+    path: 'products/save/:id',
+    component: SaveComponent
   }
 ];
 

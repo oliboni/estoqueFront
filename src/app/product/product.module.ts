@@ -11,7 +11,8 @@ import {
   MatFormFieldModule, MatIconModule,
   MatInputModule,
   MatPaginatorModule, MatSelectModule, MatSortModule,
-  MatTableModule
+  MatTableModule,
+  MatDatepickerModule
 } from '@angular/material';
 
 @NgModule({
@@ -30,6 +31,7 @@ import {
     MatSelectModule,
     MatCardModule,
     MatIconModule,
+    MatDatepickerModule
   ]
 })
 export class ProductModule { }

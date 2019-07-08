@@ -1,3 +1,53 @@
-<p>
-  save works!
-</p>
+<div class="form">
+  <mat-card class="mat-elevation-z8">
+    <div>
+      <div>
+        <h1>Nova Entrada</h1>
+      </div>
+      <form>
+        <div>
+          <mat-form-field>
+            <mat-label>Categoria</mat-label>
+            <mat-select [(ngModel)]="inputs.idProduct" name="idProduct">
+              <mat-option *ngFor="let products of product" [value]="products.id">{{products.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Categoria</mat-label>
+            <mat-select [(ngModel)]="inputs.idProvider" name="idProvider">
+              <mat-option *ngFor="let providers of provider" [value]="providers.id">{{providers.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input name="date" matInput [matDatepicker]="picker" placeholder="Data da entrada" [(ngModel)]="inputs.date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input type="numeric" name="amount" matInput placeholder="Quantidade" [(ngModel)]="inputs.amount">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input type="numeric" name="unitPrice" matInput placeholder="Preço Unitário R$" [(ngModel)]="inputs.unitPrice">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <input type="numeric" name="totalPrice" matInput value="{{inputs.unitPrice * inputs.amount}}" [(ngModel)]="inputs.totalPrice" placeholder="Total R$">
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button color="accent" style="color: #ffffff" (click)="submit()"><mat-icon aria-label="Salvar">check_circle</mat-icon> Salvar</button>
+          <button mat-raised-button color="warn" (click)="back()"><mat-icon aria-label="Cancelar">cancel</mat-icon>Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>

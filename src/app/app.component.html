@@ -4,17 +4,27 @@
     <span>Controle de Estoque</span>
     <div>
       <ul>
-          <span routerLink="/">Inicio</span>
+          <button mat-raised-button color="primary" routerLink="/">Inicio</button>
       </ul>
     </div>
     <div fxFlex fxlayout fxlayoutalign="end" fxhide.xs>
       <ul fxlayout fxlayoutgap="15px" class="navigation-items">
-          <span routerLink="/products">Produtos</span>
+          <button mat-raised-button color="primary" routerLink="/products">Produtos</button>
       </ul>
     </div>
     <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
       <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-          <span routerLink="/providers">Fornecedores</span>
+          <button mat-raised-button color="primary" routerLink="/providers">Fornecedores</button>
+      </ul>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+        <button mat-raised-button color="primary" routerLink="/inputs">Entradas</button>
+      </ul>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+        <button mat-raised-button color="primary" routerLink="/outputs">Saídas</button>
       </ul>
     </div>
   </mat-toolbar-row>

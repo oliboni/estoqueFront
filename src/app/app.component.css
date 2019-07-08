@@ -16,3 +16,7 @@ span:hover, span:active {
   padding-left: 0%;
   width: 100%;
 }
+
+button {
+  border-bottom: transparent;
+}
