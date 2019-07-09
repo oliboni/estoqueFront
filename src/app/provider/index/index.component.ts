@@ -28,7 +28,7 @@ export class IndexComponent implements OnInit {
   }
 
   back() {
-    this._router.navigate(['/']);
+    this._router.navigate(['/home']);
   }
 
   save() {

@@ -1,11 +1,19 @@
 .direita {
-  width: 50%;
+  width: 40%;
   float: left;
-  background-color: blue;
+  text-align:  center;
 }
 
 .esquerda {
-  width: 50%;
+  width: 40%;
   float: right;
-  background-color: red;
+  text-align: center;
+}
+
+.button {
+  padding-top: 4%;
+}
+
+button {
+  width: 45%;
 }

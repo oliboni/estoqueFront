@@ -20,3 +20,7 @@ span:hover, span:active {
 button {
   border-bottom: transparent;
 }
+
+body {
+  background: url(icon.png) no-repeat center center fixed;
+  }

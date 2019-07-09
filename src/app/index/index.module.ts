@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { IndexRoutingModule } from './index-routing.module';
 import { IndexComponent } from './index/index.component';
-import {MatFormFieldModule, MatInputModule, MatSortModule, MatTableModule} from '@angular/material';
+import {MatButtonModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSortModule, MatTableModule} from '@angular/material';
 
 @NgModule({
   declarations: [IndexComponent],
@@ -13,7 +13,9 @@ import {MatFormFieldModule, MatInputModule, MatSortModule, MatTableModule} from 
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class IndexModule { }

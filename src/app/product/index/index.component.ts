@@ -27,7 +27,7 @@ export class IndexComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   back() {
-    this._router.navigate(['/']);
+    this._router.navigate(['/home']);
   }
 
   save() {

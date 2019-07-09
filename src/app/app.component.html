@@ -1,37 +1,39 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Controle de Estoque</span>
-    <div>
-      <ul>
-          <button mat-raised-button color="primary" routerLink="/home">Inicio</button>
-      </ul>
-    </div>
-    <div fxFlex fxlayout fxlayoutalign="end" fxhide.xs>
-      <ul fxlayout fxlayoutgap="15px" class="navigation-items">
-          <button mat-raised-button color="primary" routerLink="/products">Produtos</button>
-      </ul>
-    </div>
-    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-          <button mat-raised-button color="primary" routerLink="/providers">Fornecedores</button>
-      </ul>
-    </div>
-    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-        <button mat-raised-button color="primary" routerLink="/inputs">Entradas</button>
-      </ul>
-    </div>
-    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-        <button mat-raised-button color="primary" routerLink="/outputs">Saídas</button>
-      </ul>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
-<div [ngStyle]="{'background': 'url(./'+ icon.png + ')'}"></div>
-<router-outlet></router-outlet>
+<body>
+  <!--The content below is only a placeholder and can be replaced.-->
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Controle de Estoque</span>
+      <div>
+        <ul>
+            <button mat-raised-button color="primary" routerLink="/home">Inicio</button>
+        </ul>
+      </div>
+      <div fxFlex fxlayout fxlayoutalign="end" fxhide.xs>
+        <ul fxlayout fxlayoutgap="15px" class="navigation-items">
+            <button mat-raised-button color="primary" routerLink="/products">Produtos</button>
+        </ul>
+      </div>
+      <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+            <button mat-raised-button color="primary" routerLink="/providers">Fornecedores</button>
+        </ul>
+      </div>
+      <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+          <button mat-raised-button color="primary" routerLink="/inputs">Entradas</button>
+        </ul>
+      </div>
+      <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+          <button mat-raised-button color="primary" routerLink="/outputs">Saídas</button>
+        </ul>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="body"></div>
+  <router-outlet></router-outlet>
 
-<footer>
-  <span>Copyright © 2019 - FalcatruasSI</span>
-</footer>
+  <footer>
+    <span>Copyright © 2019 - FalcatruasSI</span>
+  </footer>
+</body>
