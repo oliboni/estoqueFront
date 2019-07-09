@@ -7,22 +7,6 @@
       <form>
         <div>
           <mat-form-field>
-            <mat-label>Categoria</mat-label>
-            <mat-select [(ngModel)]="inputs.idProduct" name="idProduct">
-              <mat-option *ngFor="let products of product" [value]="products.id">{{products.name}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field>
-            <mat-label>Categoria</mat-label>
-            <mat-select [(ngModel)]="inputs.idProvider" name="idProvider">
-              <mat-option *ngFor="let providers of provider" [value]="providers.id">{{providers.name}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field>
             <input name="date" matInput [matDatepicker]="picker" placeholder="Data da entrada" [(ngModel)]="inputs.date">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
@@ -30,10 +14,22 @@
         </div>
         <div>
           <mat-form-field>
-            <input type="numeric" name="amount" matInput placeholder="Quantidade" [(ngModel)]="inputs.amount">
+            <mat-label>Produto</mat-label>
+            <mat-select [(ngModel)]="inputs.idProduct" name="idProduct">
+              <mat-option *ngFor="let products of product" [value]="products.id">{{products.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Fornecedor</mat-label>
+            <mat-select [(ngModel)]="inputs.idProvider" name="idProvider">
+              <mat-option *ngFor="let providers of provider" [value]="providers.id">{{providers.name}}</mat-option>
+            </mat-select>
           </mat-form-field>
         </div>
         <div>
+          <mat-form-field>
+            <input type="numeric" name="amount" matInput placeholder="Quantidade" [(ngModel)]="inputs.amount">
+          </mat-form-field>
           <mat-form-field>
             <input type="numeric" name="unitPrice" matInput placeholder="Preço Unitário R$" [(ngModel)]="inputs.unitPrice">
           </mat-form-field>

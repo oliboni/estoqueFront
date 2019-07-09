@@ -1,0 +1,35 @@
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.body {
+  width: 90%;
+  padding: 5%;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  font-size: larger;
+}
+
+
+button {
+  margin-right: 5%;
+
+}
+
+.esquerda {
+  float: left;
+  width: 70%;
+}
+
+.direita {
+  width: 20%;
+  float: right;
+  text-align:  end;
+}
+

@@ -4,7 +4,7 @@
     <span>Controle de Estoque</span>
     <div>
       <ul>
-          <button mat-raised-button color="primary" routerLink="/">Inicio</button>
+          <button mat-raised-button color="primary" routerLink="/home">Inicio</button>
       </ul>
     </div>
     <div fxFlex fxlayout fxlayoutalign="end" fxhide.xs>
@@ -29,7 +29,7 @@
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
-
+<div [ngStyle]="{'background': 'url(./'+ icon.png + ')'}"></div>
 <router-outlet></router-outlet>
 
 <footer>

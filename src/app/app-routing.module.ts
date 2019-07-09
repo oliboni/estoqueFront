@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'index-module',
+    loadChildren: './index/index-routing.module#IndexRoutingModule'
+  },
+  {
     path: 'products-module',
     loadChildren: './product/product-routing.module#ProductRoutingModule'
   },

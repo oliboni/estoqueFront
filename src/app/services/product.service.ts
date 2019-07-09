@@ -30,7 +30,7 @@ export class ProductService {
     return this._http.put<Product>('http://localhost:3000/products/' + id, product);
   }
 
-  delete(id: number) {
-    return this._http.delete('http://localhost:3000/products/' + id);
+  delete(id: number): Observable<any> {
+    return this._http.delete<any>('http://localhost:3000/products/' + id);
   }
 }

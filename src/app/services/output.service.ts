@@ -12,23 +12,23 @@ export class OutputService {
   constructor(private _httpCliente: HttpClient) { }
 
   get(id: number): Observable<Output> {
-    return this._httpCliente.get<Output>('http://localhost:3000/inputs/' + id);
+    return this._httpCliente.get<Output>('http://localhost:3000/outputs/' + id);
   }
 
   getAll(): Observable<Output[]> {
-    return this._httpCliente.get<Output[]>('http://localhost:3000/inputs');
+    return this._httpCliente.get<Output[]>('http://localhost:3000/outputs');
   }
 
   create(output: Output): Observable<Output> {
-    return this._httpCliente.post<Output>('http://localhost:3000/inputs', output);
+    return this._httpCliente.post<Output>('http://localhost:3000/outputs', output);
   }
 
   update(output: Output, id: number): Observable<Output> {
-    return this._httpCliente.put<Output>('http://localhost:3000/inputs/' + id, output);
+    return this._httpCliente.put<Output>('http://localhost:3000/outputs/' + id, output);
   }
 
   delete(id: number) {
-    return this._httpCliente.delete('http://localhost:3000/inputs/' + id);
+    return this._httpCliente.delete('http://localhost:3000/outputs/' + id);
   }
 
 }

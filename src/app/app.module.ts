@@ -12,6 +12,7 @@ import { CategoryModule} from './category/category.module';
 import { ProviderModule} from './provider/provider.module';
 import { InputModule} from './input/input.module';
 import { OutputModule} from './output/output.module';
+import {IndexModule} from './index/index.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { OutputModule} from './output/output.module';
     MatDatepickerModule,
     MatNativeDateModule,
 
+    IndexModule,
     CategoryModule,
     ProviderModule,
     ProductModule,

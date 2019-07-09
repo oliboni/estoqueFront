@@ -41,10 +41,13 @@ export class IndexComponent implements OnInit {
   delete(id: number) {
     this._productService.delete(id).subscribe(
       data => {
+        console.log(data);
+        alert('Registro excluído.');
         this.getProducts();
       }, error => {
         console.log(error.error);
-      }
+        this.getProducts();
+      },
     );
   }
 
